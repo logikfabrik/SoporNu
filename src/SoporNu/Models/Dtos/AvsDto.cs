@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace SoporNu
+namespace SoporNu.Models.Dtos
 {
     internal class AvsDto
     {

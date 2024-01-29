@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace SoporNu
+namespace SoporNu.Models
 {
     internal static class LocationFactory
     {

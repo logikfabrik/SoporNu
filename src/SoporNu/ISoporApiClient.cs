@@ -1,4 +1,6 @@
-﻿namespace SoporNu
+﻿using SoporNu.Models;
+
+namespace SoporNu
 {
     public interface ISoporApiClient
     {

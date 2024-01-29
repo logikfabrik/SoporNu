@@ -1,4 +1,4 @@
-﻿namespace SoporNu
+﻿namespace SoporNu.Models
 {
     internal static class MunicipalityFactory
     {

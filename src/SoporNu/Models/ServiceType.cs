@@ -1,4 +1,4 @@
-﻿namespace SoporNu
+﻿namespace SoporNu.Models
 {
     public enum ServiceType
     {

@@ -1,6 +1,9 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 
+using SoporNu.Models;
+using SoporNu.Models.Dtos;
+
 namespace SoporNu
 {
     internal class SoporApiClient : ISoporApiClient

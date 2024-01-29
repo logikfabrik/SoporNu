@@ -1,4 +1,6 @@
-﻿namespace SoporNu
+﻿using SoporNu.Models.Dtos;
+
+namespace SoporNu.Models
 {
     internal static class AvsFactory
     {
