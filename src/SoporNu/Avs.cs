@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoporNu
+﻿namespace SoporNu
 {
-    public class Avs
-    {
-    }
+    public record Avs(
+        AvsId Id,
+        ExternalAvsId ExternalId,
+        Municipality Municipality,
+        string? PrimaryName,
+        string? SecondaryName,
+        Location? Location);
 }

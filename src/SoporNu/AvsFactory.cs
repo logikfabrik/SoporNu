@@ -1,16 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SoporNu
+﻿namespace SoporNu
 {
     internal static class AvsFactory
     {
         public static Avs Create(AvsDto avs)
         {
-            throw new NotImplementedException();
+            var id = new AvsId(Guid.Parse(avs.Id));
+
+            var externalId = new ExternalAvsId(avs.ExternalId);
+
+            var municipality = MunicipalityFactory.Create(avs.MunicipalityCode);
+
+            static string? GetName(string? name)
+            {
+                name = name?.Trim();
+
+                if (name is null || name == string.Empty)
+                {
+                    return null;
+                }
+
+                return name;
+            }
+
+            var location = LocationFactory.Create(avs.X, avs.Y);
+
+            return new Avs(id, externalId, municipality, GetName(avs.PrimaryName), GetName(avs.SecondaryName), location);
         }
     }
 }

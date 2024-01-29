@@ -19,9 +19,16 @@ namespace SoporNu
 
             var content = response.EnsureSuccessStatusCode().Content;
 
-            var avs = await content.ReadFromJsonAsync<AvsDto[]?>(cancellationToken: cancellationToken);
+            var avs = await content.ReadFromJsonAsync<AvsDto[]?>(cancellationToken);
 
-            return avs?.Select(avs => AvsFactory.Create(avs)).ToArray() ?? [];
+            return avs?.Select(AvsFactory.Create).ToArray() ?? [];
+        }
+
+        public async Task<Avs?> GetAvs(MunicipalityCode municipalityCode, ExternalAvsId externalId, CancellationToken cancellationToken = default)
+        {
+            using var response = await _httpClient.GetAsync($"GetAvs?municipalityCode={municipalityCode}&externalAvsId={externalId}", cancellationToken);
+
+            throw new NotImplementedException();
         }
     }
 }
