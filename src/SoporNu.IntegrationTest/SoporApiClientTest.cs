@@ -5,7 +5,7 @@ namespace SoporNu.IntegrationTest
         public class GetAllAvs
         {
             [Fact]
-            public async Task Should_Return_All_Avs()
+            public async Task Should_Return_Avs()
             {
                 var httpClient = new HttpClient
                 {
@@ -16,9 +16,26 @@ namespace SoporNu.IntegrationTest
 
                 var avs = await sut.GetAllAvs();
 
-                var d = 0;
+                avs.Should().NotBeEmpty();
             }
         }
 
+        public class GetAvs
+        {
+            [Fact]
+            public async Task Should_Return_Avs()
+            {
+                var httpClient = new HttpClient
+                {
+                    BaseAddress = new Uri("https://avfallshubben.avfallsverige.se/umbraco/Api/SoporApi/")
+                };
+
+                var sut = new SoporApiClient(httpClient);
+
+                var avs = await sut.GetAvs(new MunicipalityCode("0183"), new ExternalAvsId("15377"));
+
+                avs.Should().NotBeNull();
+            }
+        }
     }
 }
