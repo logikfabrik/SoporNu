@@ -26,8 +26,6 @@ namespace SoporNu
 
         public SoporApiClient(HttpClient httpClient)
         {
-            ArgumentNullException.ThrowIfNull(httpClient, nameof(httpClient));
-
             _httpClient = httpClient;
         }
 
@@ -40,6 +38,11 @@ namespace SoporNu
             var avs = await content.ReadFromJsonAsync<GetAllAvsResponse>(cancellationToken);
 
             return avs?.Select(AvsFactory.Create).ToArray() ?? [];
+        }
+
+        public Task<Avs[]> GetAvsNearby(Location location, int maxDistanceM, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<AvsDetails?> GetAvs(MunicipalityCode municipalityCode, ExternalAvsId externalId, CancellationToken cancellationToken = default)
