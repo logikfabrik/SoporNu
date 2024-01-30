@@ -1,4 +1,5 @@
-﻿using System.Net.Http.Headers;
+﻿using System.Net;
+using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Net.Mime;
 using System.Text.Json.Serialization;
@@ -55,7 +56,7 @@ namespace SoporNu
 
             var avs = (await content.ReadFromJsonAsync<GetAvsResponse>(cancellationToken))?.Avs;
 
-            return avs is null ? null : AvsDetailsFactory.Create(avs);
+            return avs is null ? throw new HttpRequestException(null, null, HttpStatusCode.NotFound) : AvsDetailsFactory.Create(avs);
         }
     }
 }

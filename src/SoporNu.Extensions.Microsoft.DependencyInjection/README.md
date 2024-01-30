@@ -1,6 +1,6 @@
 # SoporNu.Extensions.Microsoft.DependencyInjection
 
-DI-tillägg för Microsoft.Extensions.DependencyInjection. [SoporNu](https://github.com/logikfabrik/SoporNu) är en API-klient för [Sopor.nu](https://www.sopor.nu) Hitta återvinning.
+DI-tillägg för Microsoft.Extensions.DependencyInjection. [SoporNu](https://github.com/logikfabrik/SoporNu) är en .NET API-klient för [Sopor.nu](https://www.sopor.nu) Hitta återvinning.
 
 ## Användning
 

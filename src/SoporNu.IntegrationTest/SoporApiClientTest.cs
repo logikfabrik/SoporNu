@@ -1,11 +1,13 @@
+using System.Net;
+
 namespace SoporNu.IntegrationTest
 {
-    public class SoporApiClientTest
+    public sealed class SoporApiClientTest
     {
-        public class GetAllAvs
+        public sealed class GetAllAvs
         {
             [Fact]
-            public async Task Should_Return_Avs()
+            public async Task Should_ReturnTheAvs()
             {
                 var sut = new SoporApiClient();
 
@@ -15,10 +17,10 @@ namespace SoporNu.IntegrationTest
             }
         }
 
-        public class GetAvs
+        public sealed class GetAvs
         {
             [Fact]
-            public async Task Should_Return_Avs()
+            public async Task Should_ReturnTheAvs()
             {
                 var sut = new SoporApiClient();
 
@@ -28,13 +30,13 @@ namespace SoporNu.IntegrationTest
             }
 
             [Fact]
-            public async Task Should_Not_Return_Avs()
+            public async Task Should_Throw_When_TheAvsDoesNotExist()
             {
                 var sut = new SoporApiClient();
 
-                var avs = await sut.GetAvs(new MunicipalityCode("0000"), new ExternalAvsId("00000"));
+                var act = FluentActions.Awaiting(async () => await sut.GetAvs(new MunicipalityCode("0000"), new ExternalAvsId("00000")));
 
-                avs.Should().BeNull();
+                (await act.Should().ThrowAsync<HttpRequestException>()).And.StatusCode.Should().Be(HttpStatusCode.NotFound);
             }
         }
     }

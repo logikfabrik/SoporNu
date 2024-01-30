@@ -1,17 +1,17 @@
 ﻿namespace SoporNu.Test.Models
 {
-    public class MunicipalityFactoryTest
+    public sealed class MunicipalityFactoryTest
     {
-        public class Create
+        public sealed class Create
         {
             [Fact]
-            public void Should_Return_Municipality()
+            public void Should_ReturnTheMunicipality()
             {
                 throw new NotImplementedException();
             }
 
             [Fact]
-            public void Should_Not_Return_Municipality()
+            public void Should_ReturnNull_When_TheMunicipalityDoesNotExist()
             {
                 throw new NotImplementedException();
             }
