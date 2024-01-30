@@ -1,0 +1,30 @@
+[
+  {
+    "id": "bd095ab2-1d78-4899-a68e-000750b8965b",
+    "accountId": "61a547ea-b788-4a75-b1e8-cd77a9d59949",
+    "externalAvsId": "148819",
+    "name": "ÅVS Kvarntorpsvägen",
+    "secondaryName": null,
+    "propertyNumber": "0",
+    "municipalityCode": "1488",
+    "streetAddress": "Kvarntorpsvägen",
+    "lat": "58.19789",
+    "long": "12.21971",
+    "extraInfo": null,
+    "services": null
+  },
+  {
+    "id": "12afe667-eb31-445b-90f0-001b8cf32a7d",
+    "accountId": "e3f69aaf-66b8-493e-956c-a56a15c9d97f",
+    "externalAvsId": "52090803",
+    "name": "Valhallsvägen 63",
+    "secondaryName": null,
+    "propertyNumber": "VALHALL 13:1",
+    "municipalityCode": "1292",
+    "streetAddress": "Valhallsvägen 63",
+    "lat": "56.2791247788669",
+    "long": "12.8447884069494",
+    "extraInfo": null,
+    "services": null
+  }
+]
