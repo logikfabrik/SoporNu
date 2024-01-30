@@ -1,22 +1,22 @@
 # SoporNu.Extensions.Microsoft.DependencyInjection
 
-DI-tillägg för Microsoft.Extensions.DependencyInjection. [SoporNu](https://github.com/logikfabrik/SoporNu) är en .NET API-klient för [Sopor.nu](https://www.sopor.nu) Hitta återvinning.
+DI-tillÃ¤gg fÃ¶r Microsoft.Extensions.DependencyInjection. [SoporNu](https://github.com/logikfabrik/SoporNu) Ã¤r en .NET API-klient fÃ¶r [Sopor.nu](https://www.sopor.nu) Hitta Ã¥tervinning.
 
-## Användning
+## AnvÃ¤ndning
 
-1. Lägg NuGet [SoporNu.Extensions.Microsoft.DependencyInjection](https://www.nuget.org/packages/SoporNu.Extensions.Microsoft.DependencyInjection) till ditt projekt:
+1. LÃ¤gg NuGet [SoporNu.Extensions.Microsoft.DependencyInjection](https://www.nuget.org/packages/SoporNu.Extensions.Microsoft.DependencyInjection) till ditt projekt:
 
     ```
     dotnet add package SoporNu.Extensions.Microsoft.DependencyInjection --prerelease
     ```
 
-2. Vid start-up av din app, lägg till SoporNu:
+2. Vid start-up av din app, lÃ¤gg till SoporNu:
 
     ```csharp
     builder.Services.AddSoporApiClient();
     ```
 
-3. Ta ett beroende på `ISoporApiClient`, och hämta ÅVS från Avfallshubben. T.ex.:
+3. Ta ett beroende pÃ¥ `ISoporApiClient`, och hÃ¤mta Ã…VS frÃ¥n Avfallshubben. T.ex.:
 
     ```csharp
     public class AvsService
@@ -32,6 +32,6 @@ DI-tillägg för Microsoft.Extensions.DependencyInjection. [SoporNu](https://githu
 
 ## Hur bidra
 
-SoporNu är öppen källkod (MIT), och du får gärna bidra!
+SoporNu Ã¤r Ã¶ppen kÃ¤llkod (MIT), och du fÃ¥r gÃ¤rna bidra!
 
-Om du har en buggrapport, en funktionsbegäran, eller ett förslag, öppna ett nytt ärende. För att skicka in en patch, var vänlig skapa en PR.
+Om du har en buggrapport, en funktionsbegÃ¤ran, eller ett fÃ¶rslag, Ã¶ppna ett nytt Ã¤rende. FÃ¶r att skicka in en patch, var vÃ¤nlig skapa en PR.
