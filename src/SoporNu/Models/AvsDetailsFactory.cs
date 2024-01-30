@@ -6,7 +6,11 @@ namespace SoporNu.Models
     {
         public static AvsDetails Create(AvsDto avs)
         {
-            throw new NotImplementedException();
+            var original = AvsFactory.Create(avs);
+
+            var services = avs.Services?.Select(ServiceFactory.Create)?.ToArray() ?? [];
+
+            return new AvsDetails(original, services);
         }
     }
 }

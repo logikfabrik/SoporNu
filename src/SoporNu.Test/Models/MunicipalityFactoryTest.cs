@@ -1,19 +1,25 @@
-﻿namespace SoporNu.Test.Models
+﻿using SoporNu.Models;
+
+namespace SoporNu.Test.Models
 {
     public sealed class MunicipalityFactoryTest
     {
         public sealed class Create
         {
             [Fact]
-            public void Should_ReturnTheMunicipality()
+            public void Should_ReturnAMunicipalityWithName()
             {
-                throw new NotImplementedException();
+                var municipality = MunicipalityFactory.Create("1489");
+
+                municipality.Name.Should().NotBeNull();
             }
 
             [Fact]
-            public void Should_ReturnNull_When_TheMunicipalityDoesNotExist()
+            public void Should_ReturnAMunicipalityWithoutName_When_TheMunicipalityDoesNotExist()
             {
-                throw new NotImplementedException();
+                var municipality = MunicipalityFactory.Create("0000");
+
+                municipality.Name.Should().BeNull();
             }
         }
     }

@@ -1,10 +1,18 @@
 ﻿namespace SoporNu.Models
 {
-    public sealed record Avs(
+    public record Avs(
         AvsId Id,
         ExternalAvsId ExternalId,
+
+        AvsName Name,
+
         Municipality Municipality,
-        string? PrimaryName,
-        string? SecondaryName,
-        Location? Location);
+
+        string? StreetAddress,
+
+        string? PropertyName,
+
+        Location? Location,
+
+        string? ExtraInformation);
 }

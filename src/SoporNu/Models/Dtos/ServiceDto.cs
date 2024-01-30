@@ -22,24 +22,25 @@ namespace SoporNu.Models.Dtos
         [JsonPropertyName("serviceType")]
         public int ServiceType { get; set; }
 
-        [JsonPropertyName("lastAction")]
-        public DateTime? LastAction { get; set; }
+        [JsonPropertyName("numberOfServices")]
+        public int NumberOfServices { get; set; }
 
         [JsonPropertyName("lastActionAltText")]
-        public string? LastActionAlternativeText { get; set; }
+        public string? LastActionAltText { get; set; }
 
-        [JsonPropertyName("nextAction")]
-        public DateTime? NextAction { get; set; }
+        [JsonPropertyName("lastAction")]
+        public DateTime? LastActionDateUtc { get; set; }
 
         [JsonPropertyName("nextActionAltText")]
-        public string? NextActionAlternativeText { get; set; }
+        public string? NextActionAltText { get; set; }
+
+        [JsonPropertyName("nextAction")]
+        public DateTime? NextActionDateUtc { get; set; }
 
         [JsonPropertyName("extraInfo")]
         public string? ExtraInformation { get; set; }
 
-        [JsonPropertyName("numberOfServices")]
-        public int NumberOfServices { get; set; }
-
-        public string responsible { get; set; }
+        [JsonPropertyName("responsible")]
+        public string? Responsible { get; set; }
     }
 }

@@ -10,23 +10,13 @@ namespace SoporNu.Models
 
             var externalId = new ExternalAvsId(avs.ExternalId);
 
+            var name = new AvsName(avs.GetPrimaryName(), avs.GetSecondaryName());
+
             var municipality = MunicipalityFactory.Create(avs.MunicipalityCode);
-
-            static string? GetName(string? name)
-            {
-                name = name?.Trim();
-
-                if (name is null || name == string.Empty)
-                {
-                    return null;
-                }
-
-                return name;
-            }
 
             var location = LocationFactory.Create(avs.X, avs.Y);
 
-            return new Avs(id, externalId, municipality, GetName(avs.PrimaryName), GetName(avs.SecondaryName), location);
+            return new Avs(id, externalId, name, municipality, avs.GetStreetAddress(), avs.GetPropertyNumber(), location, avs.GetExtraInformation());
         }
     }
 }

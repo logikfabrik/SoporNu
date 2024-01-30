@@ -5,6 +5,8 @@
     /// </summary>
     public enum ServiceType
     {
+        Unknown = 0,
+
         /// <summary>
         ///   The service of collecting and recycling paper packaging.
         /// </summary>

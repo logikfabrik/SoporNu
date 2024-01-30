@@ -19,14 +19,14 @@ namespace SoporNu.Models.Dtos
         [JsonPropertyName("secondaryName")]
         public string? SecondaryName { get; set; }
 
-        [JsonPropertyName("propertyNumber")]
-        public string? PropertyNumber { get; set; }
-
         [JsonPropertyName("municipalityCode")]
         public required string MunicipalityCode { get; set; }
 
         [JsonPropertyName("streetAddress")]
         public string? StreetAddress { get; set; }
+
+        [JsonPropertyName("propertyNumber")]
+        public string? PropertyNumber { get; set; }
 
         [JsonPropertyName("long")]
         public string? X { get; set; }
