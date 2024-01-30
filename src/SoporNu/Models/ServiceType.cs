@@ -1,25 +1,58 @@
 ﻿namespace SoporNu.Models
 {
+    /// <summary>
+    ///   ÅVS service types.
+    /// </summary>
     public enum ServiceType
     {
-        PaperPackaging = 1,
+        /// <summary>
+        ///   The service of collecting and recycling paper packaging.
+        /// </summary>
+        PaperPackaging = RecyclingTypes.PaperPackaging,
 
-        PlasticPackaging = 2,
+        /// <summary>
+        ///   The service of collecting and recycling plastic packaging.
+        /// </summary>
+        PlasticPackaging = RecyclingTypes.PlasticPackaging,
 
-        MetalPackaging = 3,
+        /// <summary>
+        ///   The service of collecting and recycling metal packaging.
+        /// </summary>
+        MetalPackaging = RecyclingTypes.MetalPackaging,
 
-        ClearGlassPackaging = 4,
+        /// <summary>
+        ///   The service of collecting and recycling clear glass packaging, such as bottles and cans.
+        /// </summary>
+        GlassPackagingClear = RecyclingTypes.GlassPackagingClear,
 
-        ColoredGlassPackaging = 5,
+        /// <summary>
+        ///   The service of collecting and recycling colored glass packaging, such as bottles and cans.
+        /// </summary>
+        GlassPackagingColored = RecyclingTypes.GlassPackagingColored,
 
-        Newspapers = 6,
+        /// <summary>
+        ///   The service of collecting and recycling newspapers and other printed matter, such as magazines, catalogs, and flyers.
+        /// </summary>
+        NewspapersAndOtherPrintedMatter = RecyclingTypes.NewspapersAndOtherPrintedMatter,
 
-        Batteries = 7,
+        /// <summary>
+        ///   The service of collecting and recycling batteries.
+        /// </summary>
+        Batteries = RecyclingTypes.Batteries,
 
-        Textiles = 8,
+        /// <summary>
+        ///   The service of collecting textiles. Collected textiles are reused or recycled.
+        /// </summary>
+        Textile = RecyclingTypes.Textiles,
 
+        /// <summary>
+        ///   The service of cleaning.
+        /// </summary>
         Cleaning = 9,
 
-        Snöröjning = 10,
+        /// <summary>
+        ///   The service of snow removal.
+        /// </summary>
+        SnowRemoval = 10,
     }
 }

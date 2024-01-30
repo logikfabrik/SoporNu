@@ -1,7 +1,7 @@
 ﻿namespace SoporNu.Extensions.Microsoft.DependencyInjection
 {
-    public class Class1
+    public interface ISoporApiClientFactory
     {
-
+        ISoporApiClient Create();
     }
 }

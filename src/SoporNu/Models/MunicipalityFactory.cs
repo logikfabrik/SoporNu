@@ -2,6 +2,7 @@
 {
     internal static class MunicipalityFactory
     {
+        /// <remarks>Source SCB/SKR 2023-10.</remarks>
         private static readonly Dictionary<string, Municipality> s_municipalities = new() {
             { "0114", new Municipality(new MunicipalityCode("0114"), "Upplands Väsby")},
             { "0115", new Municipality(new MunicipalityCode("0115"), "Vallentuna")},

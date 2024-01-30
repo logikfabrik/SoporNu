@@ -2,7 +2,7 @@
 
 namespace SoporNu.Models.Dtos
 {
-    internal class ServiceDto
+    internal sealed class ServiceDto
     {
         [JsonPropertyName("id")]
         public string? Id { get; set; }

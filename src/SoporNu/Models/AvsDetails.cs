@@ -1,6 +1,6 @@
 ﻿namespace SoporNu.Models
 {
-    public record AvsDetails
+    public sealed record AvsDetails
     {
     }
 }

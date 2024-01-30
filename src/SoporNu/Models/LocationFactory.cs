@@ -6,7 +6,7 @@ namespace SoporNu.Models
     {
         public static Location? Create(string? x, string? y)
         {
-            static double? Parse(string? xy) => double.TryParse(xy, CultureInfo.GetCultureInfo("en-US"), out var locationXY) ? locationXY : null;
+            static double? Parse(string? xy) => double.TryParse(xy, CultureInfo.GetCultureInfo("en-US"), out var locationXY) ? Math.Round(locationXY, 7, MidpointRounding.ToZero) : null;
 
             var locationX = Parse(x);
 

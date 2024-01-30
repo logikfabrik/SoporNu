@@ -1,4 +1,4 @@
 ﻿namespace SoporNu.Models
 {
-    public record Municipality(MunicipalityCode Code, string? Name = null);
+    public sealed record Municipality(MunicipalityCode Code, string? Name = null);
 }

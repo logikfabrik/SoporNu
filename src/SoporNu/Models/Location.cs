@@ -1,4 +1,4 @@
 ﻿namespace SoporNu.Models
 {
-    public record Location(double X, double Y);
+    public sealed record Location(double X, double Y);
 }
